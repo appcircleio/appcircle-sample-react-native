@@ -26,12 +26,18 @@
     "babel-jest": "^26.6.3",
     "eslint": "7.14.0",
     "jest": "^26.6.3",
+    "jest-junit": "^15.0.0",
     "jest-transform-stub": "^2.0.0",
     "metro-react-native-babel-preset": "^0.66.2",
     "react-test-renderer": "17.0.2"
   },
   "jest": {
     "preset": "react-native",
+    "collectCoverage": true,
+    "reporters": [
+      "default",
+      "jest-junit"
+    ],
     "setupFiles": [
       "./mock.js",
       "./node_modules/react-native-gesture-handler/jestSetup.js"
