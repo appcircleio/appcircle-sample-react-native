@@ -8,7 +8,6 @@ interface AppVersion {
 }
 
 export const checkForUpdate = async (params: {
-  pat: string;
   storePrefix: string;
   iOSProfileId: string;
   androidProfileId: string;
@@ -16,12 +15,11 @@ export const checkForUpdate = async (params: {
   userEmail: string;
 }): Promise<{updateURL: string; version: string} | undefined> => {
   try {
-    const {access_token} = await getACToken({pat: params.pat});
-
-    const appVersions = await getAppVersions(
-      access_token,
+    const {access_token} = await getACToken(
       Platform.OS === 'ios' ? params.iOSProfileId : params.androidProfileId,
     );
+
+    const appVersions = await getAppVersions(access_token);
 
     const latestVersion = getLatestVersion(params.currentVersion, appVersions);
     if (latestVersion) {

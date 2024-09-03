@@ -25,12 +25,11 @@ function App(): React.JSX.Element {
   useEffect(() => {
     const updateControl = async (currentVersion: string) => {
       const updateInfo = await checkForUpdate({
-        pat: Environment.PAT,
         storePrefix: Environment.STORE_PREFIX,
-        iOSProfileId: Environment.PROFILE_ID,
+        iOSProfileId: Environment.IOS_PROFILE_ID,
         androidProfileId: Environment.ANDROID_PROFILE_ID,
         currentVersion,
-        userEmail: '',
+        userEmail: 'USER_EMAIL',
       });
       if (updateInfo && updateInfo.updateURL && updateInfo.version) {
         Alert.alert(
@@ -40,6 +39,7 @@ function App(): React.JSX.Element {
             {
               text: 'Update',
               onPress: () => {
+                console.log('updateInfo.updateURL', updateInfo.updateURL);
                 Linking.openURL(updateInfo.updateURL);
               },
             },

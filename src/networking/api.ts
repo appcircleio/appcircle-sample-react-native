@@ -1,17 +1,20 @@
 import axios from 'axios';
+import Environment from '../Environment';
 
-const AC_AUTH_HOSTNAME = 'https://auth.appcircle.io';
+export const getACToken = async (profileId: string) => {
+  const endpointURL = `${Environment.STORE_URL}/api/auth/token`;
 
-export const getACToken = async (options: {pat: string}) => {
-  const endpointURL = `${AC_AUTH_HOSTNAME}/auth/v2/token`;
-  console.log(options.pat);
   const response = await axios.post(
     endpointURL,
-    `pat=${encodeURIComponent(options.pat)}&scope=openid email profile`,
+    {
+      OrganizationId: Environment.ORGANIZATION_ID,
+      ProfileId: profileId,
+      Secret: Environment.STORE_SECRET,
+    },
     {
       headers: {
+        'Content-Type': 'application/json',
         accept: 'application/json',
-        'content-type': 'application/x-www-form-urlencoded',
       },
     },
   );
@@ -19,11 +22,8 @@ export const getACToken = async (options: {pat: string}) => {
   return response.data;
 };
 
-export const getAppVersions = async (
-  accessToken: string,
-  profileId: string,
-) => {
-  const url = `https://api.appcircle.io/store/v2/profiles/${profileId}/app-versions`;
+export const getAppVersions = async (accessToken: string) => {
+  const url = `${Environment.STORE_URL}/api/app-versions`;
 
   try {
     const response = await axios.get(url, {
@@ -33,7 +33,7 @@ export const getAppVersions = async (
       },
     });
 
-    return response.data;
+    return response.data.data;
   } catch (error) {
     console.error('Failed to get app versions:', error);
   }

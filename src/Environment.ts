@@ -1,7 +1,8 @@
-export default class Configs {
-  static readonly PAT = '';
+export default class Environment {
   static readonly STORE_PREFIX = '';
-  static ACCESS_TOKEN = '';
-  static readonly PROFILE_ID = '';
+  static readonly IOS_PROFILE_ID = '';
   static readonly ANDROID_PROFILE_ID = '';
+  static readonly STORE_URL = '';
+  static readonly STORE_SECRET = '';
+  static readonly ORGANIZATION_ID = '';
 }
