@@ -1,5 +1,6 @@
 import {Platform} from 'react-native';
 import {getACToken, getAppVersions} from '../networking/api';
+import Environments from '../Environment';
 
 interface AppVersion {
   id: string;
@@ -9,6 +10,7 @@ interface AppVersion {
 
 export const checkForUpdate = async (params: {
   storePrefix: string;
+  storeHost: string;
   iOSProfileId: string;
   androidProfileId: string;
   currentVersion: string;
@@ -53,7 +55,7 @@ const createDownloadUrl = (
   accessToken: string,
   email: string,
 ): string | null => {
-  const baseUrl = `https://${storeId}.store.appcircle.io/api/profile/${profileId}/appVersions/${availableVersionId}/download-update/${accessToken}/user/${email}`;
+  const baseUrl = `${Environments.STORE_URL}/api/app-versions/${availableVersionId}/download-version/${accessToken}/user/${email}`;
   const downloadUrl = `itms-services://?action=download-manifest&url=${baseUrl}`;
 
   try {
