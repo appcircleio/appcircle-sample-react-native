@@ -1,5 +1,6 @@
 import axios from 'axios';
 import Environment from '../Environment';
+import {Platform} from 'react-native';
 
 export const getACToken = async (profileId: string) => {
   const endpointURL = `${Environment.STORE_URL}/api/auth/token`;
@@ -7,9 +8,11 @@ export const getACToken = async (profileId: string) => {
   const response = await axios.post(
     endpointURL,
     {
-      OrganizationId: Environment.ORGANIZATION_ID,
       ProfileId: profileId,
-      Secret: Environment.STORE_SECRET,
+      Secret:
+        Platform.OS === 'ios'
+          ? Environment.IOS_STORE_SECRET
+          : Environment.ANDROID_STORE_SECRET,
     },
     {
       headers: {

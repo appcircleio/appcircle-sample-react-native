@@ -25,8 +25,6 @@ function App(): React.JSX.Element {
   useEffect(() => {
     const updateControl = async (currentVersion: string) => {
       const updateInfo = await checkForUpdate({
-        storePrefix: Environment.STORE_PREFIX,
-        storeHost: Environment.STORE_HOST,
         iOSProfileId: Environment.IOS_PROFILE_ID,
         androidProfileId: Environment.ANDROID_PROFILE_ID,
         currentVersion,

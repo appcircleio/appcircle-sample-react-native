@@ -9,8 +9,6 @@ interface AppVersion {
 }
 
 export const checkForUpdate = async (params: {
-  storePrefix: string;
-  storeHost: string;
   iOSProfileId: string;
   androidProfileId: string;
   currentVersion: string;
@@ -26,8 +24,6 @@ export const checkForUpdate = async (params: {
     const latestVersion = getLatestVersion(params.currentVersion, appVersions);
     if (latestVersion) {
       const downloadUrl = createDownloadUrl(
-        params.storePrefix,
-        Platform.OS === 'ios' ? params.iOSProfileId : params.androidProfileId,
         latestVersion.id,
         access_token,
         params.userEmail,
@@ -44,13 +40,12 @@ export const checkForUpdate = async (params: {
       };
     }
   } catch (error) {
+    console.log(error.response);
     console.error('Failed to determine if an update is available', error);
   }
 };
 
 const createDownloadUrl = (
-  storeId: string,
-  profileId: string,
   availableVersionId: string,
   accessToken: string,
   email: string,
