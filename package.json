@@ -22,10 +22,14 @@
     "@react-native/eslint-config": "0.74.87",
     "@react-native/metro-config": "0.74.87",
     "@react-native/typescript-config": "0.74.87",
+    "@testing-library/jest-native": "^5.4.3",
+    "@testing-library/react-native": "^12.7.2",
+    "@types/jest": "^29.5.13",
     "@types/react": "^18.2.6",
     "@types/react-test-renderer": "^18.0.0",
     "babel-jest": "^29.6.3",
     "eslint": "^8.19.0",
+    "eslint-plugin-testing-library": "^6.3.0",
     "jest": "^29.6.3",
     "prettier": "2.8.8",
     "react-test-renderer": "18.2.0",
@@ -33,10 +37,6 @@
   },
   "engines": {
     "node": ">=18"
-  },
-  "jest": {
-    "preset": "react-native",
-    "transformIgnorePatterns": []
   },
   "packageManager": "yarn@3.6.4"
 }
