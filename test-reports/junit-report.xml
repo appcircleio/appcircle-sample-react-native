@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="jest tests" tests="8" failures="2" errors="0" time="1.392">
+  <testsuite name="Home Screen" errors="0" failures="1" skipped="0" timestamp="2024-09-26T21:01:27" time="0.479" tests="2">
+    <testcase classname="Home Screen should validate email input" name="Home Screen should validate email input" time="0.246">
+    </testcase>
+    <testcase classname="Home Screen fail this test on purpose" name="Home Screen fail this test on purpose" time="0.005">
+      <failure>Error: expect(element).not.toBeOnTheScreen()
+
+expected element tree not to contain element, but found
+  &lt;Text&gt;
+    E-mail is not valid
+  &lt;/Text&gt;
+    at Object.toBeOnTheScreen (/Users/guvenkaranfil/Desktop/appcircle/appcircle-sample-react-native/__tests__/Form.test.tsx:30:53)
+    at Generator.next (&lt;anonymous&gt;)
+    at asyncGeneratorStep (/Users/guvenkaranfil/Desktop/appcircle/appcircle-sample-react-native/node_modules/@babel/runtime/helpers/asyncToGenerator.js:3:17)
+    at _next (/Users/guvenkaranfil/Desktop/appcircle/appcircle-sample-react-native/node_modules/@babel/runtime/helpers/asyncToGenerator.js:17:9)</failure>
+    </testcase>
+  </testsuite>
+  <testsuite name="ProductList" errors="0" failures="1" skipped="0" timestamp="2024-09-26T21:01:27" time="0.402" tests="3">
+    <testcase classname="ProductList renders the correct number of products" name="ProductList renders the correct number of products" time="0.099">
+    </testcase>
+    <testcase classname="ProductList renders Product 1 correctly" name="ProductList renders Product 1 correctly" time="0.002">
+    </testcase>
+    <testcase classname="ProductList [Fails this test on purpose] renders Product 10 correctly" name="ProductList [Fails this test on purpose] renders Product 10 correctly" time="0.003">
+      <failure>Error: Unable to find an element with text: Product 20
+
+&lt;RCTScrollView&gt;
+  &lt;View&gt;
+    &lt;View&gt;
+      &lt;View&gt;
+        &lt;Text&gt;
+          Product 1
+        &lt;/Text&gt;
+      &lt;/View&gt;
+    &lt;/View&gt;
+    &lt;View&gt;
+      &lt;View&gt;
+        &lt;Text&gt;
+          Product 2
+        &lt;/Text&gt;
+      &lt;/View&gt;
+    &lt;/View&gt;
+    &lt;View&gt;
+      &lt;View&gt;
+        &lt;Text&gt;
+          Product 3
+        &lt;/Text&gt;
+      &lt;/View&gt;
+    &lt;/View&gt;
+    &lt;View&gt;
+      &lt;View&gt;
+        &lt;Text&gt;
+          Product 4
+        &lt;/Text&gt;
+      &lt;/View&gt;
+    &lt;/View&gt;
+    &lt;View&gt;
+      &lt;View&gt;
+        &lt;Text&gt;
+          Product 5
+        &lt;/Text&gt;
+      &lt;/View&gt;
+    &lt;/View&gt;
+    &lt;View&gt;
+      &lt;View&gt;
+        &lt;Text&gt;
+          Product 6
+        &lt;/Text&gt;
+      &lt;/View&gt;
+    &lt;/View&gt;
+    &lt;View&gt;
+      &lt;View&gt;
+        &lt;Text&gt;
+          Product 7
+        &lt;/Text&gt;
+      &lt;/View&gt;
+    &lt;/View&gt;
+    &lt;View&gt;
+      &lt;View&gt;
+        &lt;Text&gt;
+          Product 8
+        &lt;/Text&gt;
+      &lt;/View&gt;
+    &lt;/View&gt;
+    &lt;View&gt;
+      &lt;View&gt;
+        &lt;Text&gt;
+          Product 9
+        &lt;/Text&gt;
+      &lt;/View&gt;
+    &lt;/View&gt;
+    &lt;View&gt;
+      &lt;View&gt;
+        &lt;Text&gt;
+          Product 10
+        &lt;/Text&gt;
+      &lt;/View&gt;
+    &lt;/View&gt;
+  &lt;/View&gt;
+&lt;/RCTScrollView&gt;
+    at Object.getByText (/Users/guvenkaranfil/Desktop/appcircle/appcircle-sample-react-native/__tests__/DemoProductList.test.tsx:23:23)
+    at Promise.then.completed (/Users/guvenkaranfil/Desktop/appcircle/appcircle-sample-react-native/node_modules/jest-circus/build/utils.js:298:28)
+    at new Promise (&lt;anonymous&gt;)
+    at callAsyncCircusFn (/Users/guvenkaranfil/Desktop/appcircle/appcircle-sample-react-native/node_modules/jest-circus/build/utils.js:231:10)
+    at _callCircusTest (/Users/guvenkaranfil/Desktop/appcircle/appcircle-sample-react-native/node_modules/jest-circus/build/run.js:316:40)
+    at _runTest (/Users/guvenkaranfil/Desktop/appcircle/appcircle-sample-react-native/node_modules/jest-circus/build/run.js:252:3)
+    at _runTestsForDescribeBlock (/Users/guvenkaranfil/Desktop/appcircle/appcircle-sample-react-native/node_modules/jest-circus/build/run.js:126:9)
+    at _runTestsForDescribeBlock (/Users/guvenkaranfil/Desktop/appcircle/appcircle-sample-react-native/node_modules/jest-circus/build/run.js:121:9)
+    at run (/Users/guvenkaranfil/Desktop/appcircle/appcircle-sample-react-native/node_modules/jest-circus/build/run.js:71:3)
+    at runAndTransformResultsToJestFormat (/Users/guvenkaranfil/Desktop/appcircle/appcircle-sample-react-native/node_modules/jest-circus/build/legacy-code-todo-rewrite/jestAdapterInit.js:122:21)
+    at jestAdapter (/Users/guvenkaranfil/Desktop/appcircle/appcircle-sample-react-native/node_modules/jest-circus/build/legacy-code-todo-rewrite/jestAdapter.js:79:19)
+    at runTestInternal (/Users/guvenkaranfil/Desktop/appcircle/appcircle-sample-react-native/node_modules/jest-runner/build/runTest.js:367:16)
+    at runTest (/Users/guvenkaranfil/Desktop/appcircle/appcircle-sample-react-native/node_modules/jest-runner/build/runTest.js:444:34)</failure>
+    </testcase>
+  </testsuite>
+  <testsuite name="Home Screen" errors="0" failures="0" skipped="0" timestamp="2024-09-26T21:01:27" time="0.164" tests="2">
+    <testcase classname="Home Screen should render component withot error" name="Home Screen should render component withot error" time="0.078">
+    </testcase>
+    <testcase classname="Home Screen should render appcircle title" name="Home Screen should render appcircle title" time="0.002">
+    </testcase>
+  </testsuite>
+  <testsuite name="undefined" errors="0" failures="0" skipped="0" timestamp="2024-09-26T21:01:28" time="0.238" tests="1">
+    <testcase classname=" renders correctly" name=" renders correctly" time="0.11">
+    </testcase>
+  </testsuite>
+</testsuites>

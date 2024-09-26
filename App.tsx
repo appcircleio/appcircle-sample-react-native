@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import {
   SafeAreaView,
   ScrollView,
@@ -7,13 +7,18 @@ import {
   Text,
   useColorScheme,
   Image,
+  View,
+  Pressable,
 } from 'react-native';
 import {Colors} from 'react-native/Libraries/NewAppScreen';
+import ProductList from './src/components/DemoProductList';
 
 const appcircleLogo = require('./images/app_circle_icon.png');
 
 function App(): React.JSX.Element {
   const isDarkMode = useColorScheme() === 'dark';
+
+  const [isShowProducts, setisShowProducts] = useState(false);
 
   const backgroundStyle = {
     flex: 1,
@@ -27,19 +32,26 @@ function App(): React.JSX.Element {
         backgroundColor={backgroundStyle.backgroundColor}
       />
       <ScrollView
+        testID="containerScroll"
         contentInsetAdjustmentBehavior="automatic"
         style={backgroundStyle}
         contentContainerStyle={styles.container}
       >
-        <Image style={styles.tinyLogo} source={appcircleLogo} />
-        <Text
-          style={[
-            styles.title,
-            {color: isDarkMode ? Colors.lighter : Colors.darker},
-          ]}
-        >
-          Appcircle.io
-        </Text>
+        <View style={{alignItems: 'center'}}>
+          <Image style={styles.tinyLogo} source={appcircleLogo} />
+          <Text
+            style={[
+              styles.title,
+              {color: isDarkMode ? Colors.lighter : Colors.darker},
+            ]}
+          >
+            Appcircle.io
+          </Text>
+        </View>
+        <Pressable onPress={() => setisShowProducts(!isShowProducts)}>
+          <Text>Show Products</Text>
+        </Pressable>
+        {isShowProducts ? <ProductList productLength={20} /> : null}
       </ScrollView>
     </SafeAreaView>
   );
@@ -47,9 +59,8 @@ function App(): React.JSX.Element {
 
 const styles = StyleSheet.create({
   container: {
+    paddingVertical: 24,
     flex: 1,
-    alignItems: 'center',
-    justifyContent: 'center',
   },
   title: {
     marginTop: 8,

@@ -18,7 +18,7 @@ describe('Home Screen', () => {
     expect(queryByText(validationErrorMessage)).not.toBeOnTheScreen();
   });
 
-  test('should fail purpose on email validation', async () => {
+  test('fail this test on purpose', async () => {
     const {getByText, queryByText, getByPlaceholderText} = render(<Form />);
     const validationErrorMessage = 'E-mail is not valid';
 
