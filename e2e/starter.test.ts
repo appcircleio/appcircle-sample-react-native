@@ -10,6 +10,6 @@ describe('Example', () => {
   });
 
   it('should have Appcircle.io title', async () => {
-    await expect(element(by.text(/appcircle/i))).toBeVisible();
+    await expect(element(by.text(/appcircle.io/i))).toBeVisible();
   });
 });

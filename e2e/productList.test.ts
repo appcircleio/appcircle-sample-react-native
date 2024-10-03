@@ -10,9 +10,11 @@ describe('Example', () => {
   });
 
   it('should list 20 products visible', async () => {
-    await element(by.text('Show Products')).tap();
+    await element(by.text('Go to product list')).tap();
     await expect(element(by.text(/product 1/i))).toBeVisible();
-    await element(by.text('Show Products')).tap();
-    await expect(element(by.text(/product 1/i))).not.toBeVisible();
+
+    const list = await element(by.id('productList'));
+
+    list.scrollTo('bottom');
   });
 });

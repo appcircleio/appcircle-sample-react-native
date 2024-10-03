@@ -19,6 +19,7 @@ const ProductList = ({productLength}: ProductListProps) => {
 
   return (
     <FlatList
+      id="productList"
       data={products}
       keyExtractor={item => item.id}
       renderItem={renderItem}

@@ -1,34 +1,3 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuites name="jest tests" tests="2" failures="1" errors="0" time="8.561">
-  <testsuite name="Example" errors="0" failures="1" skipped="0" timestamp="2024-09-26T21:01:34" time="4.15" tests="1">
-    <testcase classname="Example should have Appcircle.io title" name="Example should have Appcircle.io title" time="1.113">
-      <failure>Test Failed: No elements found for “MATCHER(text == “/appcircle/i”)”
-
-HINT: To print view hierarchy on failed actions/matches, use log-level verbose or higher.
-    at Object.toBeVisible (/Users/guvenkaranfil/Desktop/appcircle/appcircle-sample-react-native/e2e/starter.test.ts:13:50)
-    at Generator.next (&lt;anonymous&gt;)
-    at asyncGeneratorStep (/Users/guvenkaranfil/Desktop/appcircle/appcircle-sample-react-native/node_modules/@babel/runtime/helpers/asyncToGenerator.js:3:17)
-    at _next (/Users/guvenkaranfil/Desktop/appcircle/appcircle-sample-react-native/node_modules/@babel/runtime/helpers/asyncToGenerator.js:17:9)
-    at /Users/guvenkaranfil/Desktop/appcircle/appcircle-sample-react-native/node_modules/@babel/runtime/helpers/asyncToGenerator.js:22:7
-    at new Promise (&lt;anonymous&gt;)
-    at Object.&lt;anonymous&gt; (/Users/guvenkaranfil/Desktop/appcircle/appcircle-sample-react-native/node_modules/@babel/runtime/helpers/asyncToGenerator.js:14:12)
-    at Promise.then.completed (/Users/guvenkaranfil/Desktop/appcircle/appcircle-sample-react-native/node_modules/jest-circus/build/utils.js:298:28)
-    at new Promise (&lt;anonymous&gt;)
-    at callAsyncCircusFn (/Users/guvenkaranfil/Desktop/appcircle/appcircle-sample-react-native/node_modules/jest-circus/build/utils.js:231:10)
-    at _callCircusTest (/Users/guvenkaranfil/Desktop/appcircle/appcircle-sample-react-native/node_modules/jest-circus/build/run.js:316:40)
-    at processTicksAndRejections (node:internal/process/task_queues:95:5)
-    at _runTest (/Users/guvenkaranfil/Desktop/appcircle/appcircle-sample-react-native/node_modules/jest-circus/build/run.js:252:3)
-    at _runTestsForDescribeBlock (/Users/guvenkaranfil/Desktop/appcircle/appcircle-sample-react-native/node_modules/jest-circus/build/run.js:126:9)
-    at _runTestsForDescribeBlock (/Users/guvenkaranfil/Desktop/appcircle/appcircle-sample-react-native/node_modules/jest-circus/build/run.js:121:9)
-    at run (/Users/guvenkaranfil/Desktop/appcircle/appcircle-sample-react-native/node_modules/jest-circus/build/run.js:71:3)
-    at runAndTransformResultsToJestFormat (/Users/guvenkaranfil/Desktop/appcircle/appcircle-sample-react-native/node_modules/jest-circus/build/legacy-code-todo-rewrite/jestAdapterInit.js:122:21)
-    at jestAdapter (/Users/guvenkaranfil/Desktop/appcircle/appcircle-sample-react-native/node_modules/jest-circus/build/legacy-code-todo-rewrite/jestAdapter.js:79:19)
-    at runTestInternal (/Users/guvenkaranfil/Desktop/appcircle/appcircle-sample-react-native/node_modules/jest-runner/build/runTest.js:367:16)
-    at runTest (/Users/guvenkaranfil/Desktop/appcircle/appcircle-sample-react-native/node_modules/jest-runner/build/runTest.js:444:34)</failure>
-    </testcase>
-  </testsuite>
-  <testsuite name="Example" errors="0" failures="0" skipped="0" timestamp="2024-09-26T21:01:38" time="4.329" tests="1">
-    <testcase classname="Example should list 20 products visible" name="Example should list 20 products visible" time="1.494">
-    </testcase>
-  </testsuite>
+<testsuites name="jest tests" tests="0" failures="0" errors="0" time="4.368">
 </testsuites>

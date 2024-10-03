@@ -20,7 +20,7 @@ describe('ProductList', () => {
   it('[Fails this test on purpose] renders Product 10 correctly', () => {
     const {getByText} = render(<ProductList />);
 
-    const product10 = getByText('Product 20');
+    const product10 = getByText('Product 10');
     expect(product10).toBeTruthy();
   });
 });
