@@ -48,13 +48,13 @@ module.exports = {
     attached: {
       type: 'android.attached',
       device: {
-        adbName: 'Pixel_3a',
+        adbName: 'pixel_3a',
       },
     },
     emulator: {
       type: 'android.emulator',
       device: {
-        avdName: 'Pixel_3a',
+        avdName: 'pixel_3a',
       },
     },
   },
