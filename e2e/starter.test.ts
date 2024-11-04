@@ -1,6 +1,6 @@
 import {by, device, expect, element} from 'detox';
 
-describe('Example', () => {
+describe('Example UI Test Second', () => {
   beforeAll(async () => {
     await device.launchApp();
   });

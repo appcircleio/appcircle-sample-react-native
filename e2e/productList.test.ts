@@ -1,6 +1,6 @@
 import {by, device, expect, element} from 'detox';
 
-describe('Example', () => {
+describe('Example UI Test Fist', () => {
   beforeAll(async () => {
     await device.launchApp();
   });
@@ -16,5 +16,11 @@ describe('Example', () => {
     const list = await element(by.id('productList'));
 
     list.scrollTo('bottom');
+  });
+
+  it('should fail when checking for a non-existent product', async () => {
+    await element(by.text('Go to product list')).tap();
+
+    await expect(element(by.text(/product 99/i))).toBeVisible();
   });
 });
