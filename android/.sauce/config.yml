@@ -1,0 +1,24 @@
+apiVersion: v1alpha
+kind: espresso
+defaults: {}
+showConsoleLog: false
+sauce:
+  region: eu-central-1
+  concurrency: 2
+espresso:
+  app: ./app-debug-13.apk
+  testApp: ./app-debug-androidTest-2.apk
+suites:
+- name: espresso - Google Pixel .* - Android GoogleAPI Emulator
+  devices:
+  - name: Samsung Galaxy S9
+  emulators:
+  - name: Android GoogleAPI Emulator
+    platformVersions:
+    - "10.0"
+artifacts:
+  download:
+    match:
+    - '*'
+    when: always
+    directory: artifacts
