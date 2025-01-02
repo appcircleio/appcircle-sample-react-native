@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="jest tests" tests="7" failures="1" errors="0" time="0.659">
+  <testsuite name="Home Screen" errors="0" failures="1" skipped="0" timestamp="2024-11-22T09:37:19" time="0.411" tests="2">
+    <testcase classname="Home Screen should validate email input" name="Home Screen should validate email input" time="0.205">
+    </testcase>
+    <testcase classname="Home Screen fail this test on purpose" name="Home Screen fail this test on purpose" time="0.004">
+      <failure>Error: expect(element).not.toBeOnTheScreen()
+
+expected element tree not to contain element, but found
+  &lt;Text&gt;
+    E-mail is not valid
+  &lt;/Text&gt;
+    at Object.toBeOnTheScreen (/Users/burakoztopuz/Desktop/Appcircle/dev/appcircle-sample-react-native/__tests__/Form.test.tsx:30:53)
+    at Generator.next (&lt;anonymous&gt;)
+    at asyncGeneratorStep (/Users/burakoztopuz/Desktop/Appcircle/dev/appcircle-sample-react-native/node_modules/@babel/runtime/helpers/asyncToGenerator.js:3:17)
+    at _next (/Users/burakoztopuz/Desktop/Appcircle/dev/appcircle-sample-react-native/node_modules/@babel/runtime/helpers/asyncToGenerator.js:17:9)</failure>
+    </testcase>
+  </testsuite>
+  <testsuite name="ProductList" errors="0" failures="0" skipped="0" timestamp="2024-11-22T09:37:19" time="0.079" tests="3">
+    <testcase classname="ProductList renders the correct number of products" name="ProductList renders the correct number of products" time="0.045">
+    </testcase>
+    <testcase classname="ProductList renders Product 1 correctly" name="ProductList renders Product 1 correctly" time="0.002">
+    </testcase>
+    <testcase classname="ProductList [Fails this test on purpose] renders Product 10 correctly" name="ProductList [Fails this test on purpose] renders Product 10 correctly" time="0.002">
+    </testcase>
+  </testsuite>
+  <testsuite name="Home Screen" errors="0" failures="0" skipped="0" timestamp="2024-11-22T09:37:19" time="0.061" tests="2">
+    <testcase classname="Home Screen should render component withot error" name="Home Screen should render component withot error" time="0.03">
+    </testcase>
+    <testcase classname="Home Screen should render appcircle title" name="Home Screen should render appcircle title" time="0.001">
+    </testcase>
+  </testsuite>
+</testsuites>
