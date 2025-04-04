@@ -37,6 +37,5 @@
   "jest": {
     "preset": "react-native",
     "transformIgnorePatterns": []
-  },
-  "packageManager": "yarn@3.6.4"
+  }
 }
