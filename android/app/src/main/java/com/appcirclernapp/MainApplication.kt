@@ -1,4 +1,4 @@
-package com.appcirclernapp;
+package com.appcirclernapp
 
 import android.app.Application
 import com.facebook.react.PackageList
