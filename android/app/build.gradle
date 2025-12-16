@@ -23,7 +23,9 @@ react {
     //   The list of variants to that are debuggable. For those we're going to
     //   skip the bundling of the JS bundle and the assets. By default is just 'debug'.
     //   If you add flavors like lite, prod, etc. you'll have to list your debuggableVariants.
+    //   For standalone APK installation, we need to include the bundle, so we leave this empty
     // debuggableVariants = ["liteDebug", "prodDebug"]
+    debuggableVariants = []
 
     /* Bundling */
     //   A list containing the node command and its flags. Default is just 'node'.
@@ -95,6 +97,7 @@ android {
     buildTypes {
         debug {
             signingConfig = signingConfigs.debug
+            debuggable = true
         }
         release {
             // Caution! In production, you need to generate your own keystore file.
