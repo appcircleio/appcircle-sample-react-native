@@ -8,7 +8,6 @@ import {
   useColorScheme,
   Image,
 } from 'react-native';
-import {Colors} from 'react-native/Libraries/NewAppScreen';
 
 const appcircleLogo = require('./images/app_circle_icon.png');
 
@@ -17,7 +16,7 @@ function App(): React.JSX.Element {
 
   const backgroundStyle = {
     flex: 1,
-    backgroundColor: isDarkMode ? Colors.darker : Colors.lighter,
+    backgroundColor: isDarkMode ? '#1a1a1a' : '#f5f5f5',
   };
 
   return (
@@ -29,15 +28,13 @@ function App(): React.JSX.Element {
       <ScrollView
         contentInsetAdjustmentBehavior="automatic"
         style={backgroundStyle}
-        contentContainerStyle={styles.container}
-      >
+        contentContainerStyle={styles.container}>
         <Image style={styles.tinyLogo} source={appcircleLogo} />
         <Text
           style={[
             styles.title,
-            {color: isDarkMode ? Colors.lighter : Colors.darker},
-          ]}
-        >
+            {color: isDarkMode ? '#f5f5f5' : '#1a1a1a'},
+          ]}>
           Appcircle.io
         </Text>
       </ScrollView>
